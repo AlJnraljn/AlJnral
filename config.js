@@ -1,12 +1,11 @@
-import { watchFile, unwatchFile } from 'fs'
-import chalk from 'chalk'
-import { fileURLToPath } from 'url'
-import fs from 'fs'
-import cheerio from 'cheerio'
-import fetch from 'node-fetch'
-import axios from 'axios'
-import moment from 'moment-timezone' 
-
+import {watchFile, unwatchFile} from 'fs';
+import chalk from 'chalk';
+import {fileURLToPath} from 'url';
+import fs from 'fs'; 
+import * as cheerio from 'cheerio';
+import fetch from 'node-fetch';
+import axios from 'axios';
+import moment from 'moment-timezone';
 global.owner = [
   ['994401122929', 'بوت الجنرال١²', true],
   ['967714460424', 'بوت الجنرال١²', true],
