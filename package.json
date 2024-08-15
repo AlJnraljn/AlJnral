@@ -49,6 +49,7 @@
     "cheerio": "^1.0.0-rc.10",
     "cheerio-without-node-native": "*",
     "colors": "1.4.0",
+  "cheerio":"*",
     "didyoumean": "*",
     "dotenv": "^16.4.5",
     "express": "^4.17.3",
@@ -99,6 +100,7 @@
     "webcrack": "*",
     "wibusoft": "*",
     "ws": "^8.14.2",
+    "instagram-downloader":"*",
     "yargs": "^17.3.1",
     "yt-search": "*",
     "ytdl-core": "github:khlevon/node-ytdl-core#v4.11.4-patch.2"
