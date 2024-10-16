@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          if [ ! -f package-lock.json ] && [ ! -f yarn.lock ]; then
+            echo "Error: Missing lock file (package-lock.json or yarn.lock)"
+            exit 1
+          fi
+          npm install
+
+      - name: Run tests
+        run: npm test
