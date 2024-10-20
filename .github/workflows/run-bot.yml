@@ -13,9 +13,9 @@ jobs:
         uses: actions/checkout@v3  # استخدام الإصدار الأحدث
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3  # استخدام الإصدار الأحدث
+        uses: actions/setup-node@v3  # استخدم الإصدار الأحدث
         with:
-          node-version: '14'
+          node-version: '20'  # استخدم النسخة 20
 
       - name: Install dependencies
         run: npm install
@@ -26,7 +26,7 @@ jobs:
           
       - name: Upload error log
         if: failure()
-        uses: actions/upload-artifact@3  # استخدام الإصدار الأحدث
+        uses: actions/upload-artifact@v3  # استخدم الإصدار الأحدث
         with:
           name: error-log
           path: error.log
